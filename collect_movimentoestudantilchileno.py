@@ -56,7 +56,14 @@ def get_tweets(user, max_id):
   # os limites de requisicoes da API, causando o erro:
   # tweepy.error.RateLimitError: [{'message': 'Rate limit exceeded', 'code': 88}]
   # Por isso fizemos o teste anterior, para que este erro nunca ocorra.
-  return api.user_timeline(user, max_id=max_id)
+
+  try:
+    timeline = api.user_timeline(user, max_id=max_id)
+  except tweepy.error.TweepError as e:
+    print("[ERRRO] Nao foi possivel recuperar tweets de",user,"com max_id=",max_id,"Erro:",e,"Vou ignorar e tocar adiante.")
+    timeline = []
+
+  return timeline
 
 
 # Metodo que coleta todos os tweets da timeline
@@ -110,7 +117,12 @@ def collect_user_timeline(user):
 # especificadas no array(?!) accounts.
 def main():
   # accounts=['giselecraveiro', 'true_software', 'MarizaPorto2']
-  accounts = ['Cami_RojasV','Amarimatar','damian_ignacioB','ErvinCastillo','DanielGedda','SebastianM_ra','jorgerauld','SaschaHannig','gabriel_iturrac','CaroFigueroaCe','FEUAntofagasta','FeuachUACH','FEUAI_stgo','FEUANDES','feubb','FEUBO_OFICIAL','feuc','_FEUCEN','FEUCM2011','FEUCN','feucncqbo','FEUDD_stgo','Feuls','Feupla','feusach','FEUSAM','feusmjmc','FeustSantiago','FEUTEM','feutfsm','feuv','feuvsantiago','la_fech','FEL_Stgo','FedFEMAE','FECUdeC','FEUDMVina','FEDEUNAP','FEUFRO','feummagallanes','FEDEPUDP','FepPedagogico','confech','creceruc','Estafados_CORFO','infestudiantes','Izquierda_Tuit','izqautonoma','u_informado','privmovilizadas','FELUCHILE','naupuc','jjcc_chile','mesup_Chile','SolidaridadUC','UNE_CHILE','Rdemocratica']
+  
+  #accounts = ['Cami_RojasV','Amarimatar','damian_ignacioB','ErvinCastillo','DanielGedda','SebastianM_ra','jorgerauld','SaschaHannig','gabriel_iturrac','CaroFigueroaCe','FEUAntofagasta','FeuachUACH','FEUAI_stgo','FEUANDES','feubb','FEUBO_OFICIAL','feuc','_FEUCEN','FEUCM2011','FEUCN','feucncqbo','FEUDD_stgo',
+  
+  # Deu pau no @Feupla
+  # tweepy.error.TweepError: Not authorized.
+  accounts = ['Feuls','Feupla','feusach','FEUSAM','feusmjmc','FeustSantiago','FEUTEM','feutfsm','feuv','feuvsantiago','la_fech','FEL_Stgo','FedFEMAE','FECUdeC','FEUDMVina','FEDEUNAP','FEUFRO','feummagallanes','FEDEPUDP','FepPedagogico','confech','creceruc','Estafados_CORFO','infestudiantes','Izquierda_Tuit','izqautonoma','u_informado','privmovilizadas','FELUCHILE','naupuc','jjcc_chile','mesup_Chile','SolidaridadUC','UNE_CHILE','Rdemocratica']
   for account in accounts:
     collect_user_timeline(account)
 
