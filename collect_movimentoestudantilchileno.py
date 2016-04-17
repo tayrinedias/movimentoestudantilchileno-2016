@@ -1,21 +1,34 @@
 import tweepy
 import datetime
+import sys
+import time
 
 #
 # Verifica quais os limites ainda disponiveis para consumo da API do Twitter
 #
 def get_api_limits():
 
-  rate_limit_status = api.rate_limit_status()
-  user_timeline_remaining = int(rate_limit_status['resources']['statuses']['/statuses/user_timeline']['remaining'])
-  rate_limit_status_remaining = int(rate_limit_status['resources']['application']['/application/rate_limit_status']['remaining'])
+  # Pode ser que o programa ja se inicie com o limite de requisicoes estourado.
+  rate_limit_available = False
+  while not rate_limit_available:
+    try:
+      rate_limit = api.rate_limit_status()
+      rate_limit_available = True
+    except tweepy.error.RateLimitError as e:
+      t = datetime.datetime.strftime(datetime.datetime.now(), '%Y%m%d%H%M')
+      print(t, "Limite para verificar os limites da API atingido. Vamos aguardar 60 seg...")
+      sys.stdout.flush()
+      time.sleep(60) 
 
-  print("Limit: "+str(rate_limit_status))
+  user_timeline_remaining = int(rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining'])
+  rate_limit_remaining = int(rate_limit['resources']['application']['/application/rate_limit_status']['remaining'])
+
+  print("Limit: "+str(rate_limit))
   print("user_timeline_remaining=",user_timeline_remaining)
-  print("rate_limit_status_remaining=",rate_limit_status_remaining)
+  print("rate_limit_remaining=",rate_limit_remaining)
 
   return {'user_timeline_remaining': user_timeline_remaining,
-          'rate_limit_status_remaining': rate_limit_status_remaining}
+          'rate_limit_remaining': rate_limit_remaining}
 
 
 #
@@ -33,7 +46,7 @@ def get_tweets(user, max_id):
   #                                 sobre qual o limite ainda disponivel 
   #                                 (sim, o twitter limite ate isso)
   #
-  while(limits['user_timeline_remaining'] == 0 | limits['rate_limit_status_remaining'] == 0):
+  while(limits['user_timeline_remaining'] == 0 | limits['rate_limit_remaining'] == 0):
     print("Limite de acesso à API excedido. Vamos aguardar por 1 min...")
     sys.stdout.flush()
     time.sleep(60)    
@@ -112,15 +125,11 @@ def main():
 agora = datetime.datetime.strftime(datetime.datetime.now(), '%Y%m%d%H%M')
 
 # Registre sua aplicacao em https://apps.twitter.com
-# consumer_key="sua consumer_key"
-# consumer_secret="sua consumer_secret"
-# access_token="seu access_token"
-# access_token_secret="seu access_token_secret"
+consumer_key="sua consumer_key"
+consumer_secret="sua consumer_secret"
+access_token="seu access_token"
+access_token_secret="seu access_token_secret"
 
-consumer_key="dxDCq1vknttfPYn1Ke88pjO14"
-consumer_secret="6Lq9ElMZbnO8RFGuruK1Qfml9hJf77HVoy5jAqlC2UZPCdWOQJ"
-access_token="14147108-TX4p6DxzFJO9K1LjXk17bsayOiSQCZiF06VDcUFXa"
-access_token_secret="YcGN6NLnAXJ45AURlqzIl9yDV28LksWnuyBYtdrLKfnTo"
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
