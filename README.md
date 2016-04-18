@@ -8,7 +8,7 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
     * Acesse https://apps.twitter.com
     * Clique em [Create New App](https://apps.twitter.com/app/new)
     * ...
-2. Baixe o código fonte
+2. Baixe [o script de coleta de dados do Twitter](https://github.com/code4pol/movimentoestudantilchileno-2016/blob/master/collect_movimentoestudantilchileno.py)
     * Utilize uma das formas a seguir:
         * Fazendo um clone local do repositório. 
             * git clone git@github.com:code4pol/movimentoestudantilchileno-2016.git
@@ -20,7 +20,7 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
 		    * Vamos agora fazer as alternações necessárias no código fonte que acabamos de copiar.
 3. Ajuste o código fonte
     * Copie as chaves geradas no passo 1 e informe-as nas linhas equivalentes do código fonte baixado no passo 2 (láaaa no final do arquivo).
-        * O código
+        * O código...
 
         <!-- language: lang-python -->
             consumer_key="sua consumer_key"
@@ -28,9 +28,9 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
             access_token="seu access_token"
             access_token_secret="seu access_token_secret" 
 
-       * deve se tornar algo como:
+       * ...deve se tornar algo como:
 
-       <!-- language: lang-python -->
+       ```python
             consumer_key="dxDCq1vknttfPYn4"
             consumer_secret="6Lq9ElMZbnO8RFGuruK1Qfoy5jAqlC2UZPCdWOQJ"
             access_token="14147108-TX4p6DxzFJO9K1LjXk17bsayOiZiF06VDcUFXa"
@@ -40,4 +40,4 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
 
        <!-- language: lang-py -->   
             accounts = ['Feuls','Feupla','feusach','FEUSAM','feusmjmc','FeustSantiago','FEUTEM','feutfsm','feuv','feuvsantiago','la_fech','FEL_Stgo','FedFEMAE','FECUdeC','FEUDMVina','FEDEUNAP','FEUFRO','feummagallanes','FEDEPUDP','FepPedagogico','confech','creceruc','Estafados_CORFO','infestudiantes','Izquierda_Tuit','izqautonoma','u_informado','privmovilizadas','FELUCHILE','naupuc','jjcc_chile','mesup_Chile','SolidaridadUC','UNE_CHILE','Rdemocratica']
-       * Cada um dos elementos desse array(?!?) corresponde a uma conta do tweet, exemplo @Feuls, @Feupla... Sacou? ;-)
+       * Cada um dos elementos desse [array](https://en.wikipedia.org/wiki/Array_data_structure) corresponde a uma conta do tweet, exemplo @Feuls, @Feupla... Sacou? ;-)
