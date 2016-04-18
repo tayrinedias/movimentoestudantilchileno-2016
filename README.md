@@ -41,3 +41,5 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
        <!-- language: lang-py -->   
             accounts = ['Feuls','Feupla','feusach','FEUSAM','feusmjmc','FeustSantiago','FEUTEM','feutfsm','feuv','feuvsantiago','la_fech','FEL_Stgo','FedFEMAE','FECUdeC','FEUDMVina','FEDEUNAP','FEUFRO','feummagallanes','FEDEPUDP','FepPedagogico','confech','creceruc','Estafados_CORFO','infestudiantes','Izquierda_Tuit','izqautonoma','u_informado','privmovilizadas','FELUCHILE','naupuc','jjcc_chile','mesup_Chile','SolidaridadUC','UNE_CHILE','Rdemocratica']
        * Cada um dos elementos desse [array](https://en.wikipedia.org/wiki/Array_data_structure) corresponde a uma conta do tweet, exemplo @Feuls, @Feupla... Sacou? ;-)
+4. Execute o script em sua máquin
+	* Você lembra como faz isso, né? 
