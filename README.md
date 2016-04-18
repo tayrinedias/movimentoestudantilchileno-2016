@@ -10,7 +10,7 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
     * ...
 2. Baixe [o script de coleta de dados do Twitter](https://github.com/code4pol/movimentoestudantilchileno-2016/blob/master/collect_movimentoestudantilchileno.py)
     * Utilize uma das formas a seguir:
-        * Fazendo um clone local do repositório. 
+        * Fazendo um [clone local do repositório](https://git-scm.com/book/pt-br/v1/Git-Essencial-Obtendo-um-Repositório-Git). 
             * git clone git@github.com:code4pol/movimentoestudantilchileno-2016.git
         * Se o passo anterior não fizer sentido para você:
 		    * Clique [aqui](https://raw.githubusercontent.com/code4pol/movimentoestudantilchileno-2016/master/collect_movimentoestudantilchileno.py).
