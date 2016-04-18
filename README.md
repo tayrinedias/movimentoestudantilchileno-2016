@@ -22,12 +22,12 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
     * Copie as chaves geradas no passo 1 e informe-as nas linhas equivalentes do código fonte baixado no passo 2 (láaaa no final do arquivo).
         * O código...
 
-        <!-- language: lang-python -->
+       ```python
             consumer_key="sua consumer_key"
             consumer_secret="sua consumer_secret"
             access_token="seu access_token"
             access_token_secret="seu access_token_secret" 
-
+       ```
        * ...deve se tornar algo como:
 
        ```python
