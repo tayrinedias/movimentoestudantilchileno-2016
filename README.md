@@ -35,7 +35,7 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
             consumer_secret="6Lq9ElMZbnO8RFGuruK1Qfoy5jAqlC2UZPCdWOQJ"
             access_token="14147108-TX4p6DxzFJO9K1LjXk17bsayOiZiF06VDcUFXa"
             access_token_secret="YcGN6NLnAXJ45AURlqzIl9yDV28LksWYtdrLKfnTo"
-
+        ```
     * Ajustes as contas cujos tweets deseja capturar, por volta da linha 118, 
 
        <!-- language: lang-py -->   
