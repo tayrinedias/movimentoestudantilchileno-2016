@@ -11,7 +11,9 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
    * Se o passo anterior não fizer sentido para você:
      * Clique [aqui](https://raw.githubusercontent.com/code4pol/movimentoestudantilchileno-2016/master/collect_movimentoestudantilchileno.py)
      * Copie (Ctrl+C) o código que vai abrir
-     * Salve-o em algum arquivo local na sua máquina
+     * Utilizando seu editor de *textos* preferido (e.g. Sublime ou Notepad), crie um arquivo vazio e cole o código copiado (Ctrl+V).
+     * Salve este novo arquivo (Ctrl+S) com o nome collect_movimentoestudantilchileno.py (só para padronizarmos a comunicação) em alguma pasta de sua máquina.
+     * Vamos agora fazer as alternações necessárias no código fonte que acabamos de copiar.
 3. Copie as chaves geradas no passo 1 e informe-as nas linhas equivalentes do código fonte baixado no passo 2.
 
 ```python
