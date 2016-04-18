@@ -6,9 +6,10 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
 
 1. Acesse https://apps.twitter.com e registre sua aplicação.
 2. Baixe o código fonte utilizando uma das formas a seguir:
-   1. Fazendo um clone local do repositório. 
+   * Fazendo um clone local do repositório. 
+     * git clone git@github.com:code4pol/movimentoestudantilchileno-2016.git
    * Se o passo anterior não fizer sentido para você:
-   * clique aqui e salve a página que abrir em seguida utilizando o atalho Ctrl+S do navegador.
+     * clique aqui e salve a página que abrir em seguida utilizando o atalho Ctrl+S do navegador.
 3. Copie as chaves geradas no passo 1 e informe-as nas linhas equivalentes do código fonte baixado no passo 2.
 ```python
 consumer_key="sua consumer_key"
