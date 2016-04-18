@@ -15,14 +15,14 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
      * Salve este novo arquivo (Ctrl+S) com o nome collect_movimentoestudantilchileno.py (só para padronizarmos a comunicação) em alguma pasta de sua máquina.
      * Vamos agora fazer as alternações necessárias no código fonte que acabamos de copiar.
 3. Copie as chaves geradas no passo 1 e informe-as nas linhas equivalentes do código fonte baixado no passo 2 (láaaa no final do arquivo).
-O código
+   * O código
 ```python
 consumer_key="sua consumer_key"
 consumer_secret="sua consumer_secret"
 access_token="seu access_token"
 access_token_secret="seu access_token_secret" 
 ```
-deve se tornar algo como:
+   * deve se tornar algo como:
 ```python
 consumer_key="dxDCq1vknttfPYn4"
 consumer_secret="6Lq9ElMZbnO8RFGuruK1Qfoy5jAqlC2UZPCdWOQJ"
@@ -33,3 +33,4 @@ access_token_secret="YcGN6NLnAXJ45AURlqzIl9yDV28LksWYtdrLKfnTo"
 ```python
 accounts = ['Feuls','Feupla','feusach','FEUSAM','feusmjmc','FeustSantiago','FEUTEM','feutfsm','feuv','feuvsantiago','la_fech','FEL_Stgo','FedFEMAE','FECUdeC','FEUDMVina','FEDEUNAP','FEUFRO','feummagallanes','FEDEPUDP','FepPedagogico','confech','creceruc','Estafados_CORFO','infestudiantes','Izquierda_Tuit','izqautonoma','u_informado','privmovilizadas','FELUCHILE','naupuc','jjcc_chile','mesup_Chile','SolidaridadUC','UNE_CHILE','Rdemocratica']
 ```
+   * Cada um dos elementos deste array(?!?) corresponde a uma conta do tweet, exemplo @Feuls, @Feupla... Sacou? ;-)
