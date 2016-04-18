@@ -15,11 +15,19 @@ Este é um código desenvolvido com propósitos didáticos para o ensino de prog
      * Salve este novo arquivo (Ctrl+S) com o nome collect_movimentoestudantilchileno.py (só para padronizarmos a comunicação) em alguma pasta de sua máquina.
      * Vamos agora fazer as alternações necessárias no código fonte que acabamos de copiar.
 3. Copie as chaves geradas no passo 1 e informe-as nas linhas equivalentes do código fonte baixado no passo 2 (láaaa no final do arquivo).
+O código
 ```python
 consumer_key="sua consumer_key"
 consumer_secret="sua consumer_secret"
 access_token="seu access_token"
 access_token_secret="seu access_token_secret" 
+```
+deve se tornar algo como:
+```python
+consumer_key="dxDCq1vknttfPYn4"
+consumer_secret="6Lq9ElMZbnO8RFGuruK1Qfoy5jAqlC2UZPCdWOQJ"
+access_token="14147108-TX4p6DxzFJO9K1LjXk17bsayOiZiF06VDcUFXa"
+access_token_secret="YcGN6NLnAXJ45AURlqzIl9yDV28LksWYtdrLKfnTo"
 ```
 4. Ajustes as contas cujos tweets deseja capturar, por volta da linha 118, 
 ```python
