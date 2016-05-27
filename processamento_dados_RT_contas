@@ -1,0 +1,23 @@
+import json
+
+f = open('C:\\Users\\tayri_000\\Documents\\Python\\Movestudantilchileno\\ArquivosMarisa\\arqmarisalinhasqueb.txt')
+total = {}
+
+for l in f:
+	#if l[0:3] == '{"c':
+		#print(l)
+		obj = json.loads(l)
+		if "created_at" in obj:
+			datas = obj['created_at']
+			identificador = obj['id']
+			#if identificador in total:
+				#total[identificador] = total[identificador]+1
+			#else:
+				#total[identificador] = 1
+			usuario = obj['user']['screen_name']
+			texto = obj['text']
+			if "retweeted_status" in obj:
+				usuario_orig = obj['retweeted_status']['user']['screen_name']
+				if usuario_orig in ('Cami_RojasV','Amarimatar','damian_ignacioB','ErvinCastillo','DanielGedda','SebastianM_ra','jorgerauld','SaschaHannig','gabriel_iturrac','CaroFigueroaCe','FEUAntofagasta','FeuachUACH','FEUAI_stgo','FEUANDES','feubb','feuc','_FEUCEN','FEUDD_stgo','Feuls','feusach','FEUSAM','feutfsm','feuv','la_fech','FECUdeC','FEUFRO','FEDEPUDP','confech','creceruc','infestudiantes','Izquierda_Tuit','izqautonoma','naupuc','jjcc_chile','UNE_CHILE','Rdemocratica','camila_vallejo','GiorgioJackson','gabrielboric','Karolcariola','EquipoJackson'):
+					#print("%s;%s" % (usuario,usuario_orig))
+					print("%s;%s;%s;%s;'%s'" % (datas,identificador,usuario,usuario_orig,texto.encode('utf-8','ignore')))	
